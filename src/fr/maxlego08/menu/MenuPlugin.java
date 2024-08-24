@@ -45,7 +45,6 @@ import fr.maxlego08.menu.zcore.logger.Logger;
 import fr.maxlego08.menu.zcore.utils.nms.NmsVersion;
 import fr.maxlego08.menu.zcore.utils.plugins.Metrics;
 import fr.maxlego08.menu.zcore.utils.plugins.Plugins;
-import fr.maxlego08.menu.zcore.utils.plugins.VersionChecker;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.ServicePriority;
 import org.bukkit.plugin.ServicesManager;
@@ -223,7 +222,6 @@ public class MenuPlugin extends ZPlugin {
 
         // Must register after config loads
         this.addListener(new SwapKeyListener());
-        new VersionChecker(this, 253).useLastVersion();
 
         Bukkit.getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 
